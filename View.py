@@ -8,7 +8,7 @@ class view:
     
     window_width = 1000
     window_height = 800
-    
+    ICONSIZE = 80
     def __init__(self):
         '''
         Creates a visual representation of the 
@@ -43,7 +43,13 @@ class view:
         screen.blit(time_title, (50, 650))
         pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(50, 690, 200, 50))
         pygame.draw.rect(screen, (49, 142, 105), pygame.Rect(55, 695, 190, 40))
-        
+        #load image
+        KNIGHICONS = []
+        for i in range(1,9):
+            knightimg = pygame.image.load('knigh%s.png' % (i))
+            if knightimg.get_size() != (ICONSIZE,ICONSIZE):
+                knightimg = pygame.transform.smoothscale(knightimg, (ICONSIZE, ICONSIZE))
+            KNIGHICONS.append(knightimg)
         # making the part of the board containing the icons a different colour
         pygame.draw.rect(screen, (48, 115, 221), pygame.Rect(300, 0, 700, 800))
         
