@@ -13,7 +13,7 @@ class Leaderboard:
         with an empty list of high_scores.
         '''
         # List(Tuple(int, str))
-        self.high_scores = []
+        self._high_scores = []
 
     def add_score(self, new_score):
         '''
@@ -24,24 +24,24 @@ class Leaderboard:
         than the lowest score.
         '''
         
-        # high_scores is in non-ascending order
+        # _high_scores is in non-ascending order
         
-        if self.high_scores == []:
-            self.high_scores.append(new_score)
+        if self._high_scores == []:
+            self._high_scores.append(new_score)
             
         else:
 
-            if len(self.high_scores) == self.MAX_LEN:
-                if new_score[0] > self.high_scores[self.MAX_LEN - 1][0]:
+            if len(self._high_scores) == self.MAX_LEN:
+                if new_score[0] > self._high_scores[self.MAX_LEN - 1][0]:
                     self._add_score_helper(new_score)
                     
                     # If new_score was added, check if length
                     # of high scores exceeds MAX_LEN
-                    if len(self.high_scores) > self.MAX_LEN:
+                    if len(self._high_scores) > self.MAX_LEN:
                         self.pop_lowest_score()
             else:
-                if new_score[0] <= self.high_scores[len(self.high_scores) - 1][0]:
-                    self.high_scores.append(new_score)
+                if new_score[0] <= self._high_scores[len(self._high_scores) - 1][0]:
+                    self._high_scores.append(new_score)
                 else:
                     self._add_score_helper(new_score)
 
@@ -50,14 +50,14 @@ class Leaderboard:
         (Leaderboard, List(Tuple(int, str))) -> None
         Add new_score in its correct place on the Leaderboard.
         '''
-        index = len(self.high_scores) - 1
+        index = len(self._high_scores) - 1
         
         while(index >= 0):
-            if new_score[0] <= self.high_scores[index][0]:
-                self.high_scores.insert((index + 1), new_score)
+            if new_score[0] <= self._high_scores[index][0]:
+                self._high_scores.insert((index + 1), new_score)
                 break
             elif index == 0:
-                self.high_scores.insert(0, new_score)
+                self._high_scores.insert(0, new_score)
             index -= 1
 
     def pop_lowest_score(self):
@@ -66,7 +66,8 @@ class Leaderboard:
         Pop the lowest score on the Leaderboard iff
         high_scores is not empty.
         '''
-        self.high_scores.pop()
+        if self._high_scores != []:
+            self._high_scores.pop()
         
     def print_high_scores(self):
         '''
@@ -75,8 +76,8 @@ class Leaderboard:
         and the names of the players who set them.
         '''
         place = 1
-        for i in range(0, len(self.high_scores)):
-            print("{}. {} | {}".format(place, self.high_scores[i][1], self.high_scores[i][0]))
+        for i in range(0, len(self._high_scores)):
+            print("{}. {} | {}".format(place, self._high_scores[i][1], self._high_scores[i][0]))
             place += 1
 
     def get_high_scores(self):
@@ -84,4 +85,4 @@ class Leaderboard:
         (Leaderboard) -> None
         Return the Leaderboard's high_scores list.
         '''
-        return self.high_scores
+        return self._high_scores
