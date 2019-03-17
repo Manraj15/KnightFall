@@ -23,6 +23,7 @@ Each game in KnightFall is 2 minutes long. Once the time runs out, your score wi
 ## Directory Structure
 
 ```src```: Contains all the source files for KnightFall
+
 ```imgs```: Contains the images used as icons in the game board
 
 ## Code Structure
@@ -74,6 +75,13 @@ object of type Item is instantiated. It accepts the arguments (from left to righ
 path of the file, the number of points it is worth, its x coordinate, and its y coordinate.
 * ```get_path()```: returns the img_path of the Item
 * ```get_points()```: returns the amount of points the Item is worth
+
+### View
+
+The ```View``` class can be found in View.py. It is responsible for displaying the game board as well as the main menu and all other user facing parts of the game. Currently, it contains two methods:
+
+* ```__init__()```: called upon instantiation of the game
+* ```draw_gameboard()```: initalises the ```PyGame``` interface and draws loads the main menu, and well as the inital game board 
 
 ## Extending the Code
 Adding new items of your choice is easy with the modular and extendable design of KnightFall's source code. All item's shpuld inherit from the ```Item``` class, which provides basic functionality for a given item. For example, let's say you wanted to add a ```helmet``` item. It can be done int he following way:
