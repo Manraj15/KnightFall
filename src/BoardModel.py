@@ -1,3 +1,8 @@
+'''
+The following class is used to simulate the current state of game
+Las Updated March 17, 2019
+'''
+
 from random import randint
 
 class BoardModel:

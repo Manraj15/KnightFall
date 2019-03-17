@@ -1,10 +1,11 @@
+'''
+The following class is responsible for the visual representation of the 
+board on the screen that the user will interact with the game from
+Last updated in March 17 2019
+'''
 import pygame
 
 class view:
-    '''
-    The visual representation of the board on the screen
-    that the user will interact with the game from
-    '''
     
     window_width = 1000
     window_height = 800

@@ -1,3 +1,8 @@
+'''
+The MainMenu for the game KnightFall.
+Last updated on March 17 2019
+'''
+
 import pygame
 from pygame import *
 import time
@@ -5,9 +10,6 @@ from Button import Button
 pygame.init()
 
 class MainMenu:
-    '''
-    The MainMenu for the game KnightFall.
-    '''
     
     def __init__(self, view):
         '''
