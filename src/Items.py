@@ -1,10 +1,12 @@
 
-#The following class should be used as a parent for specifc items
-#Before anyone adds to this class, please talk to me (Manraj)
+'''The following class is repsoble for acting as a parent class to all other item types
+    Last updated in March 17 2019
+'''
 
 class Item:
 	img_path = None
 	points = None
+	# The x and y coordinated will be in pixels
 	xCoord = None
 	yCoord = None
 
