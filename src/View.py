@@ -4,6 +4,8 @@ board on the screen that the user will interact with the game from
 Last updated in March 17 2019
 '''
 import pygame
+import os
+from random import randint
 
 class view:
     
@@ -46,21 +48,19 @@ class view:
         pygame.draw.rect(screen, (49, 142, 105), pygame.Rect(55, 695, 190, 40))
         #load image
         KNIGHICONS = []
-        for i in range(1,9):
-            knightimg = pygame.image.load('knigh%s.png' % (i))
-            if knightimg.get_size() != (ICONSIZE,ICONSIZE):
-                knightimg = pygame.transform.smoothscale(knightimg, (ICONSIZE, ICONSIZE))
+        for i in range(1,10):
+            knightimg = pygame.image.load(os.path.join(os.path.abspath('')[:-4], 'imgs\\Medieval_%d.png' % i)).convert_alpha()
+            if knightimg.get_size() != (self.ICONSIZE, self.ICONSIZE):
+                knightimg = pygame.transform.smoothscale(knightimg, (self.ICONSIZE, self.ICONSIZE))
             KNIGHICONS.append(knightimg)
         # making the part of the board containing the icons a different colour
         pygame.draw.rect(screen, (48, 115, 221), pygame.Rect(300, 0, 700, 800))
         
-        # put every icon on the screen, but at the moment just puts 0s
+        #this currently just randomly the icons on the screen, however it should get them from an instance of BoardModel
         for col in range(7):
             for row in range(7):
-                text = font.render("0", 1, (255, 255, 255))
-                screen.blit(text, (365 + 90 * col, 80 + 90 * row))        
-        
-        # keeps the board open untill the user closes it
+                screen.blit(KNIGHICONS[randint(0, 8)], (365 + 90 * col, 80 + 90 * row)) 
+        # keeps the board open until the user closes it
         closed = False
         while not closed:
             for event in pygame.event.get():
