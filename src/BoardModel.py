@@ -57,8 +57,8 @@ class BoardModel:
             return x-1, y+1, x+1, y-1
 
         #Check matches when x, y are at the edges of a line of len 3
-        for (i=x-1, i<=x+1; i++):
-            for (j=y-1; j<=y+1; j++):
+        for i in range(x-1, x+1):
+            for j in range(y-1, y+1):
 		
                 if i!=x and j!=y and chk_range(i,j) and self.board[y][x] == self.board[j][i]:
 		    #Assign X2 and Y2 to the next index in a line
