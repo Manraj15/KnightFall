@@ -1,6 +1,6 @@
-from GUI import *
+from ViewController import *
 
-class PauseMenu(GUI):
+class PauseMenu(ViewController):
     '''
     The PauseMenu options are resume, restart, menu, and quit.
     '''
@@ -9,7 +9,7 @@ class PauseMenu(GUI):
         '''
         Create the pause menu for the game KnightFall.
         '''
-        GUI.__init__(self, bkg_img, view, btn_dict)
+        ViewController.__init__(self, bkg_img, view, btn_dict)
 
     def _display_elements(self):
 
