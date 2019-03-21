@@ -1,12 +1,12 @@
-from GUI import *
+from ViewController import *
 
-class CreditsMenu(GUI):
+class CreditsMenu(ViewController):
 
     def __init__(self, bkg_img, view, btn_dict):
         '''
         Create the KnightFall's MainMenu to display in view.
         '''
-        GUI.__init__(self, bkg_img, view, btn_dict)
+        ViewController.__init__(self, bkg_img, view, btn_dict)
 
     def _display_elements(self):
 
