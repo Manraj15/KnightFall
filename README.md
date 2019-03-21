@@ -102,3 +102,13 @@ Adding new items of your choice is easy with the modular and extendable design o
         # new method called change_helmet
         def change_helmet(new_path):
             self.path = new_path
+ 
+ 
+ ## Licence
+ 
+ This game is made by [Jheyzelle](https://github.com/Jheyzelle)m [YoshHau](https://github.com/YoshHau), [Manraj Thind](https://github.com/Manraj15), [EvanGi](https://github.com/EvanGi), and [davidysding](https://github.com/davidysding) under the [MIT Licence](https://mit-license.org/). 
+ 
+ All artwork is taken from [Wallpaperplay](https://wallpaperplay.com/board/medieval-desktop-wallpapers). Original images can be found here:
+ 
+ * [background](https://wallpaperplay.com/walls/full/e/a/e/113798.jpg#.XJQHtXftdvA.link)
+ * [theme](https://wallpaperplay.com/walls/full/3/3/e/113796.jpg#.XJQHtSUu6kc.link)
