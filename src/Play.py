@@ -5,7 +5,6 @@ Last updated in March 17 2019
 '''
 import pygame
 import os
-from random import randint
 from PauseMenu import *
 from Button import *
 from BoardModel import *
@@ -22,7 +21,7 @@ class Play(ViewController):
     
     def __init__(self):
         '''
-        (View) -> None
+        (Play) -> None
         Creates a visual representation of the
         KnightFall game that was started
         '''
@@ -32,14 +31,17 @@ class Play(ViewController):
         
     def draw_gameboard(self):
         '''
-        (View) -> None
+        (Play) -> None
         sets up the visual representation of the 
         game board the user will play on
         '''
         pygame.init()
         
         screen = pygame.display.set_mode([self.WINDOW_WIDTH, self.WINDOW_HEIGHT])
-        screen.fill(self.BACKGROUND_COLOUR_1)
+        
+        background = pygame.image.load(self.path_to_image('imgs\\bkg-original-720.png'))
+        background = pygame.transform.smoothscale(background, (self.WINDOW_WIDTH, self.WINDOW_HEIGHT))  
+        screen.blit(background, (0, 0))        
         
         font = pygame.font.Font(None, 50)
         
@@ -87,7 +89,7 @@ class Play(ViewController):
         
     def path_to_image(self, image_location):
         '''
-        (View, str) -> str
+        (Play, str) -> str
         Creates and returns the file path to the location
         designated by image_location with the starting
         directory being KnightFall
@@ -96,7 +98,7 @@ class Play(ViewController):
     
     def load_board(self):
         '''
-        (View) -> None
+        (Play) -> None
         Sets the current instance of BoardModel that
         will be used in this instance of the view
         in board_model

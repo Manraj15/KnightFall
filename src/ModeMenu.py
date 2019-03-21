@@ -1,4 +1,5 @@
 from ViewController import *
+from Play import *
 
 class ModeMenu(ViewController):
     '''
@@ -23,9 +24,9 @@ class ModeMenu(ViewController):
     def _handle_btn_events(self, cursor, event):
         
         if self.btn_dict.get("classic").is_clicked(cursor, event):
-            pass
+            Play()
         elif self.btn_dict.get("survival").is_clicked(cursor, event):
-            pass
+            Play()
         elif self.btn_dict.get("back").is_clicked(cursor, event):
             return 0
 
