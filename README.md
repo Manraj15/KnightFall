@@ -19,7 +19,7 @@ Where the ```user``` flag install ```PyGame``` in the home directory rather than
 
 Now, download or clone the KnightFall repo. Then, change directory to KnightFall. Now, run the following command in temrinal:
 
-    $ python3 MainMenu.py
+    $ python3 KnightFall.py
 
 ## Player Manual
 The objective of KnightFall is to align as many objects as possible either vertically or horizontally. This is done by clicking on an item, and then clicking on an adjacent with which you will like to swap the previously clicked item with. Any row(s) of similar items of length greather than or equal to 3 will then be collapsed and counted as points. Newely generated items will then take the place of the collapsed items. You will gain 10 points for each item that is collapsed. For example, if you are able to match a row of 4 of the same adjacent items, you will recieve 40 points.
