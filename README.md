@@ -106,7 +106,7 @@ Adding new items of your choice is easy with the modular and extendable design o
  
  ## Licence
  
- This game is made by [Jheyzelle](https://github.com/Jheyzelle)m [YoshHau](https://github.com/YoshHau), [Manraj Thind](https://github.com/Manraj15), [EvanGi](https://github.com/EvanGi), and [davidysding](https://github.com/davidysding) under the [MIT Licence](https://mit-license.org/). 
+ This game is made by [Jheyzelle](https://github.com/Jheyzelle), [YoshHau](https://github.com/YoshHau), [Manraj15](https://github.com/Manraj15), [EvanGi](https://github.com/EvanGi), and [davidysding](https://github.com/davidysding) under the [MIT Licence](https://mit-license.org/). 
  
  All artwork is taken from [Wallpaperplay](https://wallpaperplay.com/board/medieval-desktop-wallpapers). Original images can be found here:
  
