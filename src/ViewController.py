@@ -6,13 +6,13 @@ from Leaderboard import Leaderboard
 
 pygame.init()
 
-class GUI():
+class ViewController():
     '''
     A visual interface for the KnightFall menu displays.
     '''
     def __init__(self, bkg_img, view, btn_dict = dict()):
         '''
-        (GUI, str, str, pygame.display, dict) -> None
+        (ViewController, str, str, pygame.display, dict) -> None
         Create a UI named name with a dict of visual elements
         and a backgound image to display on a view screen.
         '''
@@ -23,7 +23,7 @@ class GUI():
 
     def _set_bkg(self, image_file):
         '''
-        (GUI, str) -> None
+        (ViewController, str) -> None
         Load and prepare a KnightFall menu background.
         '''
         # Note: expected background size is 1280px by 720px
@@ -49,7 +49,7 @@ class GUI():
 
     def display_GUI(self, clock = None):
         '''
-        (GUI, pygame.time.Clock) -> None
+        (ViewController, pygame.time.Clock) -> None
         '''
         self.clock = pygame.time.Clock() if clock == None else clock
 
