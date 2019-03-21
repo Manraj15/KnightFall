@@ -9,8 +9,9 @@ from random import randint
 from PauseMenu import *
 from Button import *
 from BoardModel import *
+from ViewController import *
 
-class Play:
+class Play(ViewController):
     
     WINDOW_WIDTH = 1200
     WINDOW_HEIGHT = 800
@@ -59,12 +60,12 @@ class Play:
         pygame.draw.rect(screen, self.BACKGROUND_COLOUR_1, pygame.Rect(55, 735, 300, 60))
         
         #load image
-        KNIGHICONS = []
+        KNIGHTICONS = []
         for i in range(1,10):
             knightimg = pygame.image.load(self.path_to_image('imgs\\Medieval_%d.png' % i)).convert_alpha()
             if knightimg.get_size() != (self.ICONSIZE, self.ICONSIZE):
                 knightimg = pygame.transform.smoothscale(knightimg, (self.ICONSIZE, self.ICONSIZE))
-            KNIGHICONS.append(knightimg)
+            KNIGHTICONS.append(knightimg)
             
         # making the part of the board containing the icons a different colour
         pygame.draw.rect(screen, self.BACKGROUND_COLOUR_2, pygame.Rect(550, 0, self.WINDOW_WIDTH - 500, self.WINDOW_HEIGHT))
@@ -72,7 +73,7 @@ class Play:
         #this displays the items in BoardModel board_model on the screen
         for col in range(7):
             for row in range(7):
-                screen.blit(KNIGHICONS[self.board_model.board[row][col]], (self.WINDOW_WIDTH - 635 + 90 * col, self.WINDOW_HEIGHT - 720 + 90 * row)) 
+                screen.blit(KNIGHTICONS[self.board_model.board[row][col]], (self.WINDOW_WIDTH - 635 + 90 * col, self.WINDOW_HEIGHT - 720 + 90 * row)) 
                 
         # keeps the board open until the user closes it
         closed = False
