@@ -86,3 +86,15 @@ class Leaderboard:
         Return the Leaderboard's high_scores list.
         '''
         return self._high_scores
+    def save_leader_rank_in_txt(self):
+        '''
+        (Leaderboard) -> stdout
+        Write the Leaderboard's list into txt file
+        '''
+        rank = open("rank.txt","wb")
+        for i in range (0, len(_high_scores)-1):
+            a=self._high_scores[i]
+            rank.write(i + ". " + a)
+        rank.close()
+         
+            
