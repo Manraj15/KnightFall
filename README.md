@@ -91,6 +91,40 @@ The ```ViewController``` class can be found in ViewController.py. It is responsi
 * ```_display_elements```: Displays all the items on the board
 * ```_handle_btn_events```: Handles all clicks on buttons and other interfaces on the view
 * ```display_GUI```: Displays the GUI of the game
+
+Classes that inherit from ViewController: 
+
+* TutorialMenu : This menu contains the basic instructions to play the game KnightFall.
+
+* LBMenu : LBMenu (Leaderboards Menu) contains a list of Leaderboard instances. Since KnightFall has two modes, 
+classic and survival, the original list contains two Leaderboard objects. 
+Note that the Leaderboard class is for keeping track of the top scores information while LBMenu is for displaying them. 
+
+* CreditsMenu : This menu displays a list of main contributors of the game KnightFall.
+
+#### Leaderboard
+The Leaderboard class is meant to keep track of the top 5 high scores earned in a game mode in KnightFall. 
+Typically, there are two Leaderboards created since there are two game modes: classic and survival.
+	
+When the game session is over (time is up), the Leaderboard will check if the score earned by the user 
+qualifies to be in the top 5 Leaderboard. If yes, this new score will be added. Depending on how many 
+scores are currently saved on the Leaderboard for a game mode, Leaderboard can delete lower scores to 
+make room for the new high score.
+
+Basic Leaderboard methods:
+* ```add_score()``` : add a new_score to the Leaderboard in the correct place if new_score makes the top 5. 
+* ```pop_lowest_score()``` : Pop the lowest score on the Leaderboard iff high_scores is not empty.
+* ```get_high_scores()``` : return the Leaderboard's high_scores list.
+* ```save_leader_rank_in_txt()``` : write the leaderboard's info into a txt file
+
+#### Button
+The Button class creates a visual button from an image file.
+* ```is_hover()``` : checks if the cursor is hovering over Button
+* ```is_clicked()``` : checks if the button is clicked
+* ```set_action()``` : set the action performed by button if activated
+* ```call_action()``` : returns the button's action
+* ```display_button()``` : display the button on the screen
+
 ## Extending the Code
 Adding new items of your choice is easy with the modular and extendable design of KnightFall's source code. All item's shpuld inherit from the ```Item``` class, which provides basic functionality for a given item. For example, let's say you wanted to add a ```helmet``` item. It can be done int he following way:
 
@@ -103,6 +137,9 @@ Adding new items of your choice is easy with the modular and extendable design o
         def change_helmet(new_path):
             self.path = new_path
  
+New game modes can be created by building on the code for the base modes classic and survival. The structure is up to the person extending the game. Menus must be modified (add the new mode to the mode menu and update button linking) and a leaderboard for the new mode must be created.
+
+The Button class allows others to create buttons that function using the set_action and call_action methods. A function or value can be defined outside of a class and set to the button's action so that call_action returns this function or value.
  
  ## Licence
  
