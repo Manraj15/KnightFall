@@ -1,4 +1,4 @@
-from GUI import *
+from ViewController import *
 
 from ModeMenu import *
 from LBMenu import *
@@ -8,7 +8,7 @@ from PauseMenu import *
 
 import time
 
-class MainMenu(GUI):
+class MainMenu(ViewController):
     '''
     The MainMenu for the game KnightFall.
     '''
@@ -17,7 +17,7 @@ class MainMenu(GUI):
         '''
         Create the KnightFall's MainMenu to display in view.
         '''
-        GUI.__init__(self, bkg_img, view, btn_dict)
+        ViewController.__init__(self, bkg_img, view, btn_dict)
 
         self.mode_menu = mode
         self.lb = lb
