@@ -7,7 +7,7 @@ Prepare the KnightFall game instances.
 import pygame
 import time
 
-from GUI import *
+from ViewController import *
 
 from MainMenu import *
 from ModeMenu import *
