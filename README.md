@@ -15,7 +15,7 @@ Next, you must install PyGame. This can be done using pip:
 
     $ python3 -m pip install -U pygame --user
     
-Where the ```user``` flag install ```PyGame``` in the home directory rather than globally.
+Where the ```user``` flag installs ```PyGame``` in the home directory rather than globally.
 
 Now, download or clone the KnightFall repo. Then, change directory to KnightFall. Now, run the following command in temrinal:
 
@@ -82,13 +82,15 @@ path of the file, the number of points it is worth, its x coordinate, and its y 
 * ```get_path()```: returns the img_path of the Item
 * ```get_points()```: returns the amount of points the Item is worth
 
-### View
+### ViewController
 
-The ```View``` class can be found in View.py. It is responsible for displaying the game board as well as the main menu and all other user facing parts of the game. Currently, it contains two methods:
+The ```ViewController``` class can be found in ViewController.py. It is responsible for displaying the game board as well as the main menu and all other user facing parts of the game. Currently, it contains 5 methods:
 
 * ```__init__()```: called upon instantiation of the game
-* ```draw_gameboard()```: initalises the ```PyGame``` interface and draws loads the main menu, and well as the inital game board 
-
+* ```_set_bkg```: Sets the background image of the Menu
+* ```_display_elements```: Displays all the items on the board
+* ```_handle_btn_events```: Handles all clicks on buttons and other interfaces on the view
+* ```display_GUI```: Displays the GUI of the game
 ## Extending the Code
 Adding new items of your choice is easy with the modular and extendable design of KnightFall's source code. All item's shpuld inherit from the ```Item``` class, which provides basic functionality for a given item. For example, let's say you wanted to add a ```helmet``` item. It can be done int he following way:
 
