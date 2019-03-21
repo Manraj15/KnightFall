@@ -1,8 +1,8 @@
-from GUI import *
+from ViewController import *
 
 pygame.init()
 
-class LBMenu(GUI):
+class LBMenu(ViewController):
     '''
     The Leaderboards menu for the KnightFall game displays
     the leaderboard for the classic and survival mode.
@@ -11,7 +11,7 @@ class LBMenu(GUI):
         '''
         (LBMenu, str, str, PyGameDisplay, Dict{Button}, List[Leaderboard]) -> None
         '''
-        GUI.__init__(self, bkg_img, view, btn_dict)
+        ViewController.__init__(self, bkg_img, view, btn_dict)
         
         self.lb_modes = lb_modes
         self.selected_mode = self.btn_dict.get("classic")
