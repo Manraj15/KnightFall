@@ -1,6 +1,6 @@
-from GUI import *
+from ViewController import *
 
-class TutorialMenu(GUI):
+class TutorialMenu(ViewController):
     '''
     The tutorial menu contains a brief description
     of how to play the KnightFall game.
@@ -10,7 +10,7 @@ class TutorialMenu(GUI):
         '''
         Create the Tutorial menu for KnightFall.
         '''
-        GUI.__init__(self, bkg_img, view, btn_dict)
+        ViewController.__init__(self, bkg_img, view, btn_dict)
 
     def _display_elements(self):
 
