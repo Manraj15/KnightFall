@@ -92,7 +92,7 @@ class Leaderboard:
         Write the Leaderboard's list into txt file
         '''
         rank = open("rank.txt","wb")
-        for i in range (0, len(_high_scores)-1):
+        for i in range (0, len(self._high_scores)-1):
             a=self._high_scores[i]
             rank.write(i + ". " + a)
         rank.close()
