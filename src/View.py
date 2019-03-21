@@ -10,7 +10,7 @@ from PauseMenu import *
 from Button import *
 from BoardModel import *
 
-class view:
+class Play:
     
     WINDOW_WIDTH = 1200
     WINDOW_HEIGHT = 800
