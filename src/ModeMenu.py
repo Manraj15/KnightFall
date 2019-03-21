@@ -1,6 +1,6 @@
-from GUI import *
+from ViewController import *
 
-class ModeMenu(GUI):
+class ModeMenu(ViewController):
     '''
     The mode selection menu for the KnightFall game
     includes the classic and survival mode.
@@ -10,7 +10,7 @@ class ModeMenu(GUI):
         '''
         Create a new ModeMenu.
         '''
-        GUI.__init__(self, bkg_img, view, btn_dict)
+        ViewController.__init__(self, bkg_img, view, btn_dict)
 
     def _display_elements(self):
 
