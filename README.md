@@ -22,7 +22,7 @@ Now, download or clone the KnightFall repo. Then, change directory to KnightFall
     $ python3 KnightFall.py
 
 ## Player Manual
-The objective of KnightFall is to align as many objects as possible either vertically or horizontally. This is done by clicking on an item, and then clicking on an adjacent with which you will like to swap the previously clicked item with. Any row(s) of similar items of length greather than or equal to 3 will then be collapsed and counted as points. Newely generated items will then take the place of the collapsed items. You will gain 10 points for each item that is collapsed. For example, if you are able to match a row of 4 of the same adjacent items, you will recieve 40 points.
+The objective of KnightFall is to align as many objects as possible either vertically or horizontally. This is done by clicking on an item, and then clicking on an adjacent with which you will like to swap the previously clicked item with. Any row(s) of similar items of length greather than or equal to 3 will then be collapsed and counted as points. Newly generated items will then take the place of the collapsed items. You will gain 10 points for each item that is collapsed. For example, if you are able to match a row of 4 of the same adjacent items, you will recieve 40 points.
 
 Each game in KnightFall is 2 minutes long. Once the time runs out, your score will be recorded. Moreover, you will be notified if your current score is the new high score.
 
@@ -102,7 +102,7 @@ Note that the Leaderboard class is for keeping track of the top scores informati
 
 * CreditsMenu : This menu displays a list of main contributors of the game KnightFall.
 
-### MainMenu
+#### MainMenu
 
 The ```MainMenu``` class inherits from ```ViewController```. The purpose of this class is to initialize the main menu buttons and handle its functions. The attributes are other menus that are accessible through the main menu. The current four attributes are:
 
@@ -116,14 +116,14 @@ The methods are:
 * ```_display_elements()```: Shows buttons on main page (start, tutorial, leaderboard, credits and quit)
 * ```_handle_btn_events()```: Selects the appropriate menu to display or exits the game
 
-### ModeMenu
+#### ModeMenu
 
 The ```ModeMenu``` class and all its attributes inherits from ```ViewController```. It displays the options of game modes or returns to the main menu. The buttons on the mode selection page are: survival, classic and back. The methods are: 
 
 * ```_display_elements()```: Displays its buttons (Classic, Survival and Back)
 * ```_handle_btn_events()```: Selects the view of the game mode or returns back to main menu
 
-### PauseMenu
+#### PauseMenu
 
 The ```PauseMenu``` class inherits from ```ViewController```. Its purpose is to display the pause menu and initializes the buttons.
 
