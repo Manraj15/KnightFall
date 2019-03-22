@@ -145,6 +145,15 @@ Basic Leaderboard methods:
 * ```get_high_scores()``` : return the Leaderboard's high_scores list.
 * ```save_leader_rank_in_txt()``` : write the leaderboard's info into a txt file
 
+#### Play
+The ```Play``` class inherits from ```ViewController```. It exists in order to display the board on the screen. 
+It also displays a pause button, the current score, and the time remaining in the current instance of the game.
+
+The methods of ```Play``` are:
+* ```draw_gameboard```: Displays the board on the screen as well as the pause button, score, and time remaining
+* ```path_to_image```: Is a helper function that makes it easier to access images by creating the path to them
+* ```load_board```: Creates an instance of BoardModel to be used to play the game
+
 #### Button
 The Button class creates a visual button from an image file.
 * ```is_hover()``` : checks if the cursor is hovering over Button
