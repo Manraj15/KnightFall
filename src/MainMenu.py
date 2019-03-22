@@ -33,12 +33,6 @@ class MainMenu(ViewController):
         self.btn_dict.get("credits").display_button()
         self.btn_dict.get("quit").display_button()
 
-    def display_select_mode(self):
-
-        self.btn_dict.get("title-mode").display_button()
-        self.btn_dict.get("logo").display_button()
-        self.btn_dict.get("back").display_button()
-
     def _handle_btn_events(self, cursor, event):
         
         if self.btn_dict.get("start").is_clicked(cursor, event):
