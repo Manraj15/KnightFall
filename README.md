@@ -33,7 +33,7 @@ Each game in KnightFall is 2 minutes long. Once the time runs out, your score wi
 ```imgs```: Contains the images used as icons in the game board
 
 ## Code Structure
-KnightFall's source code contians 3 major classes: ```BoardModel```, ```Items```, and ```View```
+KnightFall's source code contains 3 major classes: ```BoardModel```, ```Items```, and ```View```
 
 ### BoardModel
 The ```BoardModel``` class is in the BoardModel.py file. It is used to represent the current state of the
@@ -101,6 +101,34 @@ classic and survival, the original list contains two Leaderboard objects.
 Note that the Leaderboard class is for keeping track of the top scores information while LBMenu is for displaying them. 
 
 * CreditsMenu : This menu displays a list of main contributors of the game KnightFall.
+
+### MainMenu
+
+The ```MainMenu``` class inherits from ```ViewController```. The purpose of this class is to initialize the main menu buttons and handle its functions. The attributes are other menus that are accessible through the main menu. The current four attributes are:
+
+* ```mode_menu```: an instance of ```ModeMenu```
+* ```lb```: an instance of ```LBMenu``` leaderboard menu
+* ```tut```: an instance of ```TutorialMenu```
+* ```credits```: an instance of ```CreditsMenu```
+
+The methods are: 
+
+* ```_display_elements()```: Shows buttons on main page (start, tutorial, leaderboard, credits and quit)
+* ```_handle_btn_events()```: Selects the appropriate menu to display or exits the game
+
+### ModeMenu
+
+The ```ModeMenu``` class and all its attributes inherits from ```ViewController```. It displays the options of game modes or returns to the main menu. The buttons on the mode selection page are: survival, classic and back. The methods are: 
+
+* ```_display_elements()```: Displays its buttons (Classic, Survival and Back)
+* ```_handle_btn_events()```: Selects the view of the game mode or returns back to main menu
+
+### PauseMenu
+
+The ```PauseMenu``` class inherits from ```ViewController```. Its purpose is to display the pause menu and initializes the buttons.
+
+* ```_display_elements()```: Displays its buttons (Restart, Resume, Menu, Quit)
+* ```_handle_btn_events()```: Selects the appropriate visual interface to display
 
 #### Leaderboard
 The Leaderboard class is meant to keep track of the top 5 high scores earned in a game mode in KnightFall. 
